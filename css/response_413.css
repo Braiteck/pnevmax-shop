@@ -1,0 +1,673 @@
+@media (max-width: 413px)
+{
+    /*---------------
+        Main styles
+    ---------------*/
+    :root
+    {
+        --font_size_title: 18px;
+    }
+
+
+    .cont
+    {
+        padding: 0 15px;
+    }
+
+
+
+    .block
+    {
+        margin-bottom: 30px;
+    }
+
+
+
+    .text_block h2
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .text_block blockquote,
+    .text_block q
+    {
+        padding: 10px 15px;
+    }
+
+
+    .form .type label
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        padding: 12px 15px 12px 52px;
+    }
+
+    .form .type label:before
+    {
+        left: 15px;
+    }
+
+    .form input[type=checkbox] + label
+    {
+        line-height: 18px;
+    }
+
+
+
+    /*---------------
+        Header
+    ---------------*/
+    .mob_header
+    {
+        margin-bottom: 15px;
+        padding: 15px 0;
+    }
+
+
+    .mob_header .logo a,
+    .mob_header .logo img
+    {
+        height: 16px;
+    }
+
+
+    .mob_header .login_link
+    {
+        width: 26px;
+        height: 26px;
+    }
+
+
+    .mob_header .cart_link
+    {
+        height: 26px;
+        margin-left: 10px;
+
+        background-size: 22px auto;
+    }
+
+    .mob_header .mob_menu_link
+    {
+        margin-left: 0;
+    }
+
+
+
+    /*---------------
+        Sidebar
+    ---------------*/
+    aside .links a
+    {
+        min-height: 0;
+        padding: 10px 15px;
+    }
+
+
+
+    aside .lk_menu a
+    {
+        font-size: 12px;
+        line-height: 20px;
+
+        padding: 5px 15px;
+    }
+
+
+
+    aside .cats #catalog_modal2 .cats_list
+    {
+        margin-bottom: -12px;
+
+        column-gap: 0;
+        column-count: 1;
+    }
+
+    aside .cats #catalog_modal2:before
+    {
+        display: none;
+    }
+
+    aside .cats #catalog_modal2 .cats_list > *
+    {
+        padding-bottom: 12px;
+    }
+
+
+
+    /*---------------
+        Main section
+    ---------------*/
+    .main_slider .slide .sub_title
+    {
+        font-size: 12px;
+    }
+
+    .main_slider .slide .title
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+
+    .advantages
+    {
+        margin-top: 15px;
+    }
+
+    .advantages .item
+    {
+        font-size: 10px;
+
+        padding: 0 10px;
+    }
+
+    .advantages .item .icon
+    {
+        max-width: 35px;
+        margin-right: 10px;
+    }
+
+
+
+    .content .products
+    {
+        padding-bottom: 20px;
+    }
+
+    .products .flex,
+    .content .products .flex
+    {
+        --products_count: 1;
+    }
+
+    .products .product,
+    .content .products .product,
+    .products .product .back,
+    .content .products .product .back
+    {
+        padding: 20px;
+    }
+
+    .products .product .features
+    {
+        font-size: 12px;
+    }
+
+    .products .product .thumb
+    {
+        padding-bottom: 50%;
+    }
+
+    .products .product:before,
+    .products .product:last-child:after,
+    .products .product:after
+    {
+        display: none !important;
+    }
+
+    .products .product .head:before,
+    .content .products .product .head:before
+    {
+        top: 0;
+
+        height: 100%;
+    }
+
+    .products .product .head:after,
+    .content .products .product .head:after
+    {
+        top: 0;
+    }
+
+    .products .product .head:before,
+    .products .product .head:after,
+    .content .products .product .head:before,
+    .content .products .product .head:after
+    {
+        visibility: visible;
+
+        opacity: 1;
+    }
+
+    .products .product .buy_link
+    {
+        width: 100px;
+    }
+
+
+
+    .banners .banner .title
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+
+    .return_info .payments > *
+    {
+        width: 33.333%;
+        padding: 10px;
+    }
+
+
+
+    .delivery_info .info_block
+    {
+        padding: 15px 20px;
+    }
+
+
+
+    .checkout .form .block
+    {
+        padding: 15px;
+    }
+
+
+    .checkout .form .delivery label,
+    .checkout .form .payment label
+    {
+        min-height: 80px;
+        padding: 10px 15px 10px 75px;
+    }
+
+
+    .checkout .form .cart_info table td.thumb
+    {
+        width: 90px;
+    }
+
+    .checkout .form .cart_info table td.price
+    {
+        width: auto;
+    }
+
+    .checkout .form .cart_info table td.amount
+    {
+        font-size: 18px;
+
+        width: auto;
+    }
+
+    .checkout .form .cart_info table td.amount span
+    {
+        width: 45px;
+    }
+
+
+    .checkout .form .links
+    {
+        padding: 0;
+    }
+
+    .checkout .form .links .prev
+    {
+        font-size: 13px;
+        line-height: 36px;
+
+        width: auto;
+        height: 40px;
+        padding: 0 25px;
+    }
+
+    .checkout .form .links .next
+    {
+        font-size: 13px;
+        line-height: 40px;
+
+        width: auto;
+        height: 40px;
+        padding: 0 25px;
+    }
+
+
+
+    .cart_info table td.thumb
+    {
+        width: 90px;
+    }
+
+    .cart_info table td.thumb a
+    {
+        height: 62px;
+    }
+
+    .cart_info table td.info
+    {
+        width: calc(100% - 90px);
+        padding-right: 30px;
+    }
+
+    .cart_info table td.delete
+    {
+        right: -10px;
+    }
+
+    .cart_info table td.amount .input
+    {
+        font-size: 16px;
+
+        width: 60px;
+    }
+
+    .cart_info table td.price
+    {
+        font-size: 16px;
+
+        min-width: 71px;
+    }
+
+
+    .cart_info .cart_total .total_price
+    {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+
+
+    .lk_orders .title,
+    .lk_personal .title
+    {
+        font-size: 16px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .lk_orders .order + .order
+    {
+        margin-top: 20px;
+    }
+
+    .lk_orders .order .head .col_left,
+    .lk_orders .order .head .col_right
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    .lk_orders .order .head .col_right
+    {
+        margin-top: 10px;
+    }
+
+    .lk_orders .order .head .price,
+    .lk_orders .order .head .count
+    {
+        text-align: left;
+    }
+
+
+    .lk_orders .order .cart_info table td.thumb
+    {
+        width: 90px;
+    }
+
+    .lk_orders .order .cart_info table td.price,
+    .lk_orders .order .cart_info table td.amount
+    {
+        width: auto;
+    }
+
+    .lk_orders .order .cart_info .cart_total .total_price
+    {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+
+
+    .lk_personal .item .name
+    {
+        font-size: 12px;
+
+        width: 110px;
+    }
+
+    .lk_personal .item .val
+    {
+        width: calc(100% - 110px);
+    }
+
+
+
+    .register .form
+    {
+        padding: 15px;
+    }
+
+
+
+    .cats_wall .cat .thumb
+    {
+        height: 55px;
+    }
+
+
+
+    .product_info .images .slide a
+    {
+        padding-bottom: 66%;
+    }
+
+
+    .product_info .links
+    {
+        margin-top: 20px;
+        margin-bottom: -10px;
+        margin-left: -10px;
+    }
+
+    .product_info .links > *
+    {
+        width: calc(100% - 10px);
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    .product_info .links a
+    {
+        padding: 0 20px;
+    }
+
+    .product_info .links a .icon
+    {
+        margin-right: 10px;
+    }
+
+    .product_info .links a.buy_link
+    {
+        width: calc(100% - 10px);
+    }
+
+
+    .product_info .data .product_name
+    {
+        line-height: 26px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .product_info .data .buy_block .col_left
+    {
+        padding: 15px;
+    }
+
+
+    .product_info .data .features .title
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .product_info .data .features .name
+    {
+        width: 145px;
+    }
+
+    .product_info .data .features .val
+    {
+        width: calc(100% - 145px);
+    }
+
+
+
+    .region_info .city
+    {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    .region_info .contacts
+    {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+
+
+    .region_info .personal .item
+    {
+        padding: 15px;
+    }
+
+    .region_info .personal .foto
+    {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .region_info .personal .info
+    {
+        width: 100%;
+    }
+
+
+
+    .projects .project
+    {
+        padding: 15px;
+    }
+
+
+
+    .vacancies .item
+    {
+        padding: 15px;
+    }
+
+    .vacancies .item .name
+    {
+        font-size: 17px;
+        line-height: 21px;
+
+        margin-bottom: 5px;
+    }
+
+    .vacancies .item .link
+    {
+        margin-top: 15px;
+    }
+
+
+
+    .subscribe .head
+    {
+        font-size: 12px;
+    }
+
+    .subscribe .head .title
+    {
+        font-size: 13px;
+    }
+
+
+    .subscribe .input
+    {
+        font-size: 13px;
+
+        width: calc(100% - 110px);
+        padding: 0 20px;
+    }
+
+    .subscribe .submit_btn
+    {
+        font-size: 13px;
+
+        width: 110px;
+    }
+
+
+
+    /*---------------
+        Footer
+    ---------------*/
+    footer .logo
+    {
+        font-size: 12px;
+    }
+
+    footer .logo img
+    {
+        max-width: 75%;
+    }
+
+
+    footer .contacts .phone
+    {
+        font-size: 18px;
+    }
+
+
+    footer .col_right
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        PopUp
+    ---------------*/
+    .fancybox-slide--html
+    {
+        padding: 15px;
+    }
+
+    .fancybox-slide--html .fancybox-close-small
+    {
+        width: 55px;
+        height: 55px;
+        padding: 10px;
+    }
+
+
+    .modal_title
+    {
+        font-size: 19px;
+        line-height: 21px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .modal .links
+    {
+        margin: 25px -25px -25px;
+        padding: 25px;
+    }
+
+    #login_modal,
+    #recovery_modal
+    {
+        padding: 25px;
+    }
+}
