@@ -53,14 +53,54 @@
     /*---------------
         Header
     ---------------*/
-    .mob_header .cart_link
+    .mob_header
     {
-        margin-left: 20px;
+        padding: 20px 0;
     }
+
+
+    .mob_header .logo a,
+    .mob_header .logo img
+    {
+        height: 20px;
+    }
+
+
+    .mob_header .links a + a
+    {
+        margin-left: 16px;
+    }
+
+    .mob_header .links img
+    {
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+
+    .mob_header .account
+    {
+        margin-left: 24px;
+    }
+
+    .mob_header .account .login_link img
+    {
+        width: 20px;
+        margin-right: 0;
+    }
+
+    .mob_header .account .login_link span
+    {
+        display: none;
+    }
+
 
     .mob_header .mob_menu_link
     {
-        margin-left: 5px;
+        width: 46px;
+        margin-right: -8px;
+        margin-left: 16px;
+        padding: 0 8px;
     }
 
 
@@ -94,64 +134,76 @@
     /*---------------
         Main section
     ---------------*/
-    .main_slider .slide .info
+    .search .field
+    {
+        width: calc(100% - 104px);
+    }
+
+    .search .icon
+    {
+        left: 16px;
+
+        width: 20px;
+        height: 20px;
+    }
+
+    .search .input
+    {
+        font-size: 16px;
+
+        height: 44px;
+        padding: 0 60px 0 52px;
+    }
+
+    .search .clear_btn
+    {
+        right: 16px;
+
+        width: 24px;
+        height: 24px;
+    }
+
+    .search .submit_btn
+    {
+        font-size: 16px;
+
+        width: 104px;
+        height: 44px;
+    }
+
+
+
+    .main_slider .bg
+    {
+        object-position: 0 50%;
+    }
+
+
+    .main_slider .info
     {
         width: 100%;
-        height: auto;
-        padding: 40px 20px 20px;
+        height: 280px;
 
         text-align: center;
     }
 
-    .main_slider .slide .sub_title
+    .main_slider .sub_title
     {
-        font-size: 13px;
-
-        width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 24px;
     }
 
-    .main_slider .slide .title
+    .main_slider .link
     {
-        font-size: 22px;
-        line-height: 26px;
-    }
-
-    .main_slider .slide .link
-    {
-        margin-top: 20px;
+        margin-top: 24px;
         margin-right: auto;
         margin-left: auto;
-    }
-
-
-    .main_slider .slide .img
-    {
-        position: relative;
-
-        width: 100%;
-        height: auto;
-        padding: 0 20px 40px;
     }
 
 
 
     .advantages .item
     {
-        font-size: 12px;
-
         width: 50%;
-    }
-
-    .advantages .item:nth-child(3),
-    .advantages .item:nth-child(4)
-    {
-        margin-top: 15px;
-    }
-
-    .advantages .item .icon
-    {
-        margin-right: 15px;
     }
 
 

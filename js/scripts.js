@@ -1,4 +1,16 @@
-$(function(){
+$(function () {
+	// Ширина окна для ресайза
+	WW = $(window).width()
+
+
+	// Поиск
+	$('.search .clear_btn').click(function (e) {
+		e.preventDefault()
+
+		$('.search .input').val('')
+	})
+
+
 	// Основной слайдер на главной
 	$('.main_slider .slider').owlCarousel({
 		items: 1,
@@ -13,12 +25,12 @@ $(function(){
 
 
 	// Личный кабинет - заказы
-    $('.lk_orders .order .head').click(function(e) {
-    	e.preventDefault()
+	$('.lk_orders .order .head').click(function (e) {
+		e.preventDefault()
 
-    	let parent = $(this).closest('.order')
+		let parent = $(this).closest('.order')
 
-    	if( parent.hasClass('active') ) {
+		if (parent.hasClass('active')) {
 			parent.removeClass('active')
 			parent.find('.data').slideUp(300)
 		} else {
@@ -29,34 +41,34 @@ $(function(){
 
 
 	// Регистрация
-	$('.form .type label').click(function() {
-	    let content = $(this).data('content')
+	$('.form .type label').click(function () {
+		let content = $(this).data('content')
 
-	    $('.form .type_content').hide()
-	    $('.form .type_content' + content).fadeIn(300)
+		$('.form .type_content').hide()
+		$('.form .type_content' + content).fadeIn(300)
 	})
 
 
 	// Оформление заказа
-	$('.checkout .form .links .next').click(function(e) {
+	$('.checkout .form .links .next').click(function (e) {
 		e.preventDefault()
 
-	    let parent = $(this).closest('.block')
+		let parent = $(this).closest('.block')
 
-	    parent.hide().next().fadeIn(300)
+		parent.hide().next().fadeIn(300)
 
-	    if( $(this).hasClass('finish') ) {
-	    	$('.checkout .form .submit').fadeIn(300)
-	    }
+		if ($(this).hasClass('finish')) {
+			$('.checkout .form .submit').fadeIn(300)
+		}
 	})
 
-	$('.checkout .form .links .prev').click(function(e) {
+	$('.checkout .form .links .prev').click(function (e) {
 		e.preventDefault()
 
-	    let parent = $(this).closest('.block')
+		let parent = $(this).closest('.block')
 
-	    parent.hide().prev().fadeIn(300)
-	    $('.checkout .form .submit').hide()
+		parent.hide().prev().fadeIn(300)
+		$('.checkout .form .submit').hide()
 	})
 
 
@@ -72,23 +84,23 @@ $(function(){
 
 
 	// Фильтр
-	$('body').on('click', 'aside .filter .title', function(e) {
-    	e.preventDefault()
+	$('body').on('click', 'aside .filter .title', function (e) {
+		e.preventDefault()
 
-    	if( $(window).width() < 1024 ){
-    		if( $(this).hasClass('active') ) {
+		if ($(window).width() < 1024) {
+			if ($(this).hasClass('active')) {
 				$(this).removeClass('active').next().slideUp(300)
 			} else {
 				$(this).addClass('active').next().slideDown(300)
 			}
-    	}
+		}
 	})
 
 
-	$('body').on('click', '.filter .item .name', function(e) {
+	$('body').on('click', '.filter .item .name', function (e) {
 		e.preventDefault()
 
-		if( $(this).hasClass('active') ) {
+		if ($(this).hasClass('active')) {
 			$(this).removeClass('active')
 			$(this).next().slideUp(300)
 		} else {
@@ -99,55 +111,55 @@ $(function(){
 
 
 	$priceRange = $('.filter #price_range').ionRangeSlider({
-        type     : 'double',
-        min      : 0,
-        max      : 500,
-        from     : 150,
-        to       : 180,
-        step     : 1,
-        onChange : function (data) {
-            $('.filter .price_range input.ot').val( data.from )
-            $('.filter .price_range input.do').val( data.to )
-        }
-    }).data("ionRangeSlider")
+		type: 'double',
+		min: 0,
+		max: 500,
+		from: 150,
+		to: 180,
+		step: 1,
+		onChange: function (data) {
+			$('.filter .price_range input.ot').val(data.from)
+			$('.filter .price_range input.do').val(data.to)
+		}
+	}).data("ionRangeSlider")
 
-    $('.filter .price_range .input').keyup(function() {
-        $priceRange.update({
-            from : parseInt( $('.filter .price_range input.ot').val() ),
-            to : parseInt( $('.filter .price_range input.do').val() )
-        })
-    })
-
-
-    // Изменение вида отображения товаров в категории
-	$('.products .view .grid_link').click(function(e){
-	    e.preventDefault()
-
-	    let parent = $(this).closest('.products')
-
-	    $('.products .view > *').removeClass('active')
-	    $(this).addClass('active')
-
-	    parent.find('.list').addClass('flex')
-	    parent.find('.list').removeClass('list')
-	})
-
-	$('.products .view .list_link').click(function(e){
-	    e.preventDefault()
-
-	    let parent = $(this).closest('.products')
-
-	    $('.products .view > *').removeClass('active')
-	    $(this).addClass('active')
-
-	    parent.find('.flex').addClass('list')
-	    parent.find('.flex').removeClass('flex')
+	$('.filter .price_range .input').keyup(function () {
+		$priceRange.update({
+			from: parseInt($('.filter .price_range input.ot').val()),
+			to: parseInt($('.filter .price_range input.do').val())
+		})
 	})
 
 
-	if( $(window).width() < 768 ) {
+	// Изменение вида отображения товаров в категории
+	$('.products .view .grid_link').click(function (e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.products')
+
+		$('.products .view > *').removeClass('active')
+		$(this).addClass('active')
+
+		parent.find('.list').addClass('flex')
+		parent.find('.list').removeClass('list')
+	})
+
+	$('.products .view .list_link').click(function (e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.products')
+
+		$('.products .view > *').removeClass('active')
+		$(this).addClass('active')
+
+		parent.find('.flex').addClass('list')
+		parent.find('.flex').removeClass('flex')
+	})
+
+
+	if ($(window).width() < 768) {
 		$('.products .list').addClass('flex')
-	    $('.products .list').removeClass('list')
+		$('.products .list').removeClass('list')
 	}
 
 
@@ -159,58 +171,75 @@ $(function(){
 		loop: false,
 		smartSpeed: 500,
 		responsive: {
-	        0:{
-	            items: 1,
+			0: {
+				items: 1,
 				margin: 15
-	        },
-	        414:{
-	            items: 2,
+			},
+			414: {
+				items: 2,
 				margin: 15
-	        },
-	        768:{
-	            items: 3,
+			},
+			768: {
+				items: 3,
 				margin: 20
-	        },
-	        1200:{
-	            items: 4,
+			},
+			1200: {
+				items: 4,
 				margin: 20
-	        }
+			}
 		}
 	})
 })
 
 
 
-$(window).load(function(){
+$(window).load(function () {
 	// Выравнивание в товарах
-	$('.products .flex').each(function(){
+	$('.products .flex').each(function () {
 		productHeight($(this), parseInt($(this).css('--products_count')))
 	})
 })
 
 
 
-$(window).resize(function(){
-	// Выравнивание в товарах
-	$('.products .flex').each(function(){
-		productHeight($(this), parseInt($(this).css('--products_count')))
-	})
+$(window).on('resize', () => {
+	if (typeof WW !== 'undefined' && WW != $(window).width()) {
+		// Моб. версия
+		if (!firstResize) {
+			$('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=1, maximum-scale=1')
+			if ($(window).width() < 375) $('meta[name=viewport]').attr('content', 'width=375, user-scalable=no')
+
+			firstResize = true
+		} else {
+			firstResize = false
+		}
 
 
-	// Изменение вида отображения товаров в категории
-	if( $(window).width() < 768 ) {
-		$('.products .list').addClass('flex back_list')
-	    $('.products .list').removeClass('list')
-	} else {
-		$('.products .back_list').addClass('list')
-	    $('.products .back_list').removeClass('flex back_list')
+		// Выравнивание в товарах
+		$('.products .flex').each(function () {
+			productHeight($(this), parseInt($(this).css('--products_count')))
+		})
+
+
+		// Изменение вида отображения товаров в категории
+		if ($(window).width() < 768) {
+			$('.products .list').addClass('flex back_list')
+			$('.products .list').removeClass('list')
+		} else {
+			$('.products .back_list').addClass('list')
+			$('.products .back_list').removeClass('flex back_list')
+		}
+
+
+		// Перезапись ширины окна
+		WW = $(window).width()
 	}
 })
 
 
 
 // Выравнивание в товарах
-function productHeight(context, step){
+function productHeight(context, step) {
 	let start = 0
 	let finish = step
 	let products = context.find('.product')
@@ -219,14 +248,14 @@ function productHeight(context, step){
 	products.find('.front').height('auto')
 	products.find('.back').height('auto')
 
-	for( let i = 0; i < products.length; i++ ){
+	for (let i = 0; i < products.length; i++) {
 		let obj = products.slice(start, finish).find('.head')
 		let obj2 = products.slice(start, finish).find('.front').add(products.slice(start, finish).find('.back'))
 
-		setHeight( obj )
-		setHeight( obj2 )
+		setHeight(obj)
+		setHeight(obj2)
 
-		start = start+step
-		finish = finish+step
+		start = start + step
+		finish = finish + step
 	}
 }

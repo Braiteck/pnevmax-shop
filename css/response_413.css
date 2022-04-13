@@ -61,8 +61,7 @@
     ---------------*/
     .mob_header
     {
-        margin-bottom: 15px;
-        padding: 15px 0;
+        padding: 16px 0;
     }
 
 
@@ -73,24 +72,9 @@
     }
 
 
-    .mob_header .login_link
+    .mob_header .links a + a
     {
-        width: 26px;
-        height: 26px;
-    }
-
-
-    .mob_header .cart_link
-    {
-        height: 26px;
-        margin-left: 10px;
-
-        background-size: 22px auto;
-    }
-
-    .mob_header .mob_menu_link
-    {
-        margin-left: 0;
+        margin-left: 12px;
     }
 
 
@@ -139,35 +123,43 @@
     /*---------------
         Main section
     ---------------*/
-    .main_slider .slide .sub_title
+    .search .field
     {
-        font-size: 12px;
+        width: 100%;
     }
 
-    .main_slider .slide .title
+    .search .submit_btn
     {
-        font-size: 18px;
-        line-height: 24px;
+        width: 100%;
     }
 
 
 
-    .advantages
+    .main_slider .info
     {
-        margin-top: 15px;
+        padding: 32px 48px;
     }
 
-    .advantages .item
+    .main_slider .sub_title
     {
-        font-size: 10px;
-
-        padding: 0 10px;
+        font-size: 15px;
     }
 
-    .advantages .item .icon
+    .main_slider .title
     {
-        max-width: 35px;
-        margin-right: 10px;
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+
+    .main_slider .owl-carousel .owl-nav button.owl-prev
+    {
+        left: -4px;
+    }
+
+    .main_slider .owl-carousel .owl-nav button.owl-next
+    {
+        right: -4px;
     }
 
 

@@ -56,226 +56,6 @@
 
 
     /*---------------
-        Header
-    ---------------*/
-    .mob_header
-    {
-        display: block;
-    }
-
-
-    .header_wrap
-    {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        left: 0;
-
-        width: 270px;
-        height: auto !important;
-        margin: 0;
-
-        transition: transform .3s linear;
-        transform: translateX(-100%);
-
-        background: #fff;
-    }
-
-    .header_wrap.show
-    {
-        transform: translateX(0);
-    }
-
-    .header_wrap header
-    {
-        overflow: auto;
-
-        height: 100vh;
-        padding: 0;
-    }
-
-    .header_wrap header:before
-    {
-        display: none;
-    }
-
-    .header_wrap .close
-    {
-        position: absolute;
-        top: 0;
-        left: 100%;
-
-        display: none;
-
-        width: 50px;
-        height: 63px;
-        padding: 13px;
-
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-    }
-
-    .header_wrap.show .close
-    {
-        display: flex;
-    }
-
-    .header_wrap .close span
-    {
-        position: relative;
-
-        display: block;
-
-        width: 100%;
-        height: 2px;
-
-        background: #fff;
-    }
-
-    .header_wrap .close span + span
-    {
-        margin-top: 6px;
-    }
-
-    .header_wrap .close span:nth-child(1)
-    {
-        top: 4px;
-
-        transform: rotate(45deg);
-    }
-
-    .header_wrap .close span:nth-child(2)
-    {
-        top: -4px;
-
-        transform: rotate(-45deg);
-    }
-
-
-    header .info
-    {
-        padding: 0;
-    }
-
-    header .info .cont.flex
-    {
-        padding: 0;
-
-        flex-wrap: wrap;
-    }
-
-
-    header .logo
-    {
-        width: 100%;
-        height: 63px;
-        margin: 0;
-        padding: 10px;
-    }
-
-    header .logo img
-    {
-        height: 19px;
-    }
-
-
-    header .search
-    {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
-        padding: 15px;
-    }
-
-
-    header .account,
-    header .cart_link
-    {
-        display: none;
-    }
-
-
-    header .contacts
-    {
-        margin-left: 0;
-        padding: 10px 15px 15px;
-    }
-
-    header .contacts .phone,
-    header .contacts .email,
-    header .contacts .phone a,
-    header .contacts .email a
-    {
-        color: #030303;
-    }
-
-    header .contacts .email
-    {
-        margin-top: 10px;
-    }
-
-
-    header .bottom
-    {
-        margin: 10px 0 0;
-        padding-top: 10px;
-
-        border-top: 1px solid #ddd;
-    }
-
-    header .bottom .cont
-    {
-        padding: 0;
-    }
-
-
-    header .menu
-    {
-        display: block;
-
-        width: 100%;
-        margin: 0;
-        padding: 0;
-
-        background: none;
-        box-shadow: none;
-    }
-
-    header .menu .item
-    {
-        display: block;
-
-        width: 100%;
-    }
-
-    header .menu .item > a,
-    header .menu .item > a.techn_portal
-    {
-        height: 40px;
-        padding: 0 15px;
-
-        text-align: left;
-
-        justify-content: flex-start;
-    }
-
-    header .menu .item > a.techn_portal br
-    {
-        display: none;
-    }
-
-
-
-    header.fixed
-    {
-        box-shadow: none;
-    }
-
-
-
-    /*---------------
         Sidebar
     ---------------*/
     aside,
@@ -366,43 +146,31 @@
     /*---------------
         Main section
     ---------------*/
-    .main_slider
+    .advantages
     {
-        width: 100%;
-        margin-left: 0;
+        margin-top: 24px;
     }
 
-    .main_slider .slide .info
+    .advantages .flex
     {
-        height: 320px;
+        padding: 16px 16px 1px;
+
+        justify-content: center;
     }
 
-    .main_slider .slide .title
-    {
-        font-size: 25px;
-        line-height: 31px;
-    }
 
+    .advantages .sep
+    {
+        display: none;
+    }
 
 
     .advantages .item
     {
-        font-size: 11px;
-        line-height: normal;
+        width: 33.333%;
+        margin-bottom: 16px;
 
-        min-height: 47px;
-        padding: 0 15px;
-    }
-
-    .advantages .item .icon
-    {
-        max-width: 40px;
-        margin-right: 10px;
-    }
-
-    .advantages .item .icon img
-    {
-        max-width: 100%;
+        justify-content: center;
     }
 
 

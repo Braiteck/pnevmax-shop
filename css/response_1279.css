@@ -21,7 +21,7 @@
     .content_flex .content,
     .content_flex aside.big + .content
     {
-        width: calc(100% - var(--aside_big_width) - 30px);
+        width: calc(100% - var(--aside_big_width) - 24px);
     }
 
 
@@ -55,98 +55,176 @@
     /*---------------
         Header
     ---------------*/
+    .mob_header
+    {
+        display: block;
+    }
+
+
+    .header_wrap
+    {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+
+        width: 270px;
+        height: 100% !important;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        margin: 0;
+
+        transition: transform .3s linear;
+        transform: translateX(-100%);
+
+        background: #fff;
+    }
+
+    .header_wrap.show
+    {
+        transform: translateX(0);
+    }
+
+    .header_wrap header
+    {
+        display: flex;
+        overflow: auto;
+        flex-direction: column;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding: 0;
+    }
+
+    .header_wrap header:before
+    {
+        display: none;
+    }
+
+    .header_wrap .close
+    {
+        position: absolute;
+        top: 0;
+        left: 100%;
+
+        display: none;
+
+        width: 50px;
+        height: 63px;
+        padding: 13px;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header_wrap.show .close
+    {
+        display: flex;
+    }
+
+    .header_wrap .close span
+    {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+        height: 2px;
+
+        background: #fff;
+    }
+
+    .header_wrap .close span + span
+    {
+        margin-top: 6px;
+    }
+
+    .header_wrap .close span:nth-child(1)
+    {
+        top: 4px;
+
+        transform: rotate(45deg);
+    }
+
+    .header_wrap .close span:nth-child(2)
+    {
+        top: -4px;
+
+        transform: rotate(-45deg);
+    }
+
+
     header .info
     {
-        margin-bottom: 0;
-        padding-top: 20px;
+        padding: 24px;
+
+        order: 2;
     }
 
-    header .logo
+    header .info .cont.flex
     {
-        height: 83px;
-        margin-top: -20px;
-        margin-left: -20px;
+        padding: 0;
+
+        flex-wrap: wrap;
     }
 
 
-
-    header .search
+    header .logo,
+    header .links,
+    header .account
     {
-        width: calc(100% - 656px);
-        margin-left: 25px;
+        display: none;
     }
-
 
 
     header .contacts
     {
-        margin-left: 25px;
+        width: 100%;
     }
 
-    header .contacts .phone
+    header .contacts > *
     {
-        font-size: 16px;
+        color: #000;
     }
 
-
-    header .account
+    header .contacts + .contacts,
+    header .contacts > * + *
     {
-        margin-left: 30px;
+        margin-top: 8px;
     }
-
-    header .account .login_link
-    {
-        padding: 0;
-
-        border-radius: 0;
-        background: none;
-    }
-
 
 
     header .menu
     {
-        z-index: 9;
+        display: block;
 
-        width: calc(100% + 40px);
-        margin-right: -20px;
-        margin-left: -20px;
-        padding-left: 0;
+        padding: 24px;
+    }
+
+    header .menu .item + .item
+    {
+        margin-top: 16px;
+    }
+
+    header .menu .item > a
+    {
+        display: block;
+
+        height: auto;
+
+        text-align: left;
     }
 
 
-    header .bottom .logo
+
+    header.fixed
     {
-        width: 180px;
-        margin-top: 0;
-    }
-
-    header .bottom .logo img
-    {
-        height: 16px;
-    }
-
-
-
-    header.fixed .menu
-    {
-        padding-left: 180px;
-    }
-
-    header.fixed .menu .item > a
-    {
-        padding: 0 10px;
-    }
-
-    header.fixed .menu .item > a.e_shop
-    {
-        margin-left: 10px;
-        padding: 0 20px;
-    }
-
-    header.fixed .menu .item > a.e_shop img
-    {
-        display: none;
+        box-shadow: none;
     }
 
 
@@ -162,7 +240,16 @@
 
     aside .cats .items a
     {
-        min-height: 59px;
+        font-size: 14px;
+
+        min-height: 52px;
+        padding: 8px 20px;
+    }
+
+    aside .cats .items a sup
+    {
+        font-size: 12px;
+        line-height: 100%;
     }
 
 
@@ -210,39 +297,85 @@
     /*---------------
         Main section
     ---------------*/
-    .main_slider .slide .info
+    .search .field
     {
-        width: calc(100% - 380px);
-        padding: 40px;
-    }
-
-    .main_slider .slide .sub_title
-    {
-        margin-bottom: 20px;
-    }
-
-    .main_slider .slide .title
-    {
-        font-size: 28px;
-        line-height: 34px;
+        width: calc(100% - 140px);
     }
 
 
-    .main_slider .slide .img
+    .search .icon
     {
-        width: 380px;
+        left: 20px;
+
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .search .input
+    {
+        font-size: 17px;
+
+        height: 48px;
+    }
+
+
+    .search .clear_btn
+    {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .search .submit_btn
+    {
+        font-size: 18px;
+
+        width: 140px;
+        height: 48px;
+    }
+
+
+
+    .main_slider .info
+    {
+        width: 392px;
+        height: 312px;
+        padding: 40px 64px;
+    }
+
+    .main_slider .title
+    {
+        font-size: 34px;
+        line-height: 40px;
     }
 
 
 
     .advantages .flex
     {
-        padding: 15px 0;
+        padding: 12px;
+    }
+
+    .advantages .sep
+    {
+        height: 60px;
     }
 
     .advantages .item
     {
-        font-size: 14px;
+        font-size: 15px;
+    }
+
+    .advantages .item .icon
+    {
+        margin-right: 15px;
+    }
+
+    .advantages .item img
+    {
+        max-width: 48px;
+        max-height: 48px;
     }
 
 

@@ -19,9 +19,6 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 
-		<!-- Традиционная иконка сайта, размер 16x16, прозрачность поддерживается. Рекомендуемый формат: .ico или .png -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-
 		<!-- Подключение шрифтов с гугла -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
@@ -31,6 +28,8 @@
 		<link rel="stylesheet" href="css/ion.rangeSlider.css">
 		<link rel="stylesheet" href="css/styles.css">
 
+		<link rel="stylesheet" href="css/response_1899.css" media="(max-width: 1899px)">
+		<link rel="stylesheet" href="css/response_1439.css" media="(max-width: 1439px)">
 		<link rel="stylesheet" href="css/response_1279.css" media="(max-width: 1279px)">
 		<link rel="stylesheet" href="css/response_1023.css" media="(max-width: 1023px)">
 		<link rel="stylesheet" href="css/response_767.css" media="(max-width: 767px)">
@@ -50,16 +49,26 @@
 							</a>
 						</div>
 
+						<div class="links">
+							<a href="/" class="compare_link">
+								<img src="images/ic_compare.png" alt="">
+							</a>
 
-						<a href="#login_modal" class="login_link modal_link">
-							<img src="images/ic_user.svg" alt="">
-						</a>
+							<a href="/" class="favorite_link">
+								<img src="images/ic_favorite.png" alt="">
+							</a>
 
+							<a href="/" class="cart_link">
+								<img src="images/ic_cart.png" alt="">
+							</a>
+						</div>
 
-						<a href="/" class="cart_link">
-							<span class="count">3</span>
-						</a>
-
+						<div class="account">
+							<a href="#login_modal" class="login_link modal_link">
+								<img src="images/ic_user.png" alt="">
+								<span>Войти</span>
+							</a>
+						</div>
 
 						<a href="#" class="mob_menu_link">
 							<span></span>
@@ -73,67 +82,90 @@
 				<header>
 					<div class="info">
 						<div class="cont flex">
-
-							<div class="logo">
-								<a href="/">
-									<img src="images/logo.png" alt="">
-									<div class="slogan">Интернет-магазин</div>
-								</a>
-							</div>
-
-
-							<div class="search">
-								<form action="">
-									<input type="text" name="" value="" placeholder="Поиск" class="input">
-									<button type="submit" class="submit_btn"></button>
-								</form>
-							</div>
-
+							<a href="/" class="logo">
+								<img src="images/logo.png" alt="">
+							</a>
 
 							<div class="contacts">
 								<div class="phone">
-									<a href="tel:84957393999">8 (495) 739-39-99</a>
+									<div class="icon"><img src="images/ic_phone.png" alt=""></div>
+									<a href="tel:88005111690">8 (800) 511-16-90</a>
 								</div>
 
-								<div class="email">
-									<a href="mailto:mail@pneumax.ru">mail@pneumax.ru</a>
+								<div class="phone">
+									<div class="icon"><img src="images/ic_whatsapp.png" alt=""></div>
+									<a href="tel:+79653691704">+7 (965) 369-17-04</a>
 								</div>
 							</div>
 
+							<div class="contacts">
+								<div class="phone">
+									<div class="icon"><img src="images/ic_phone2.png" alt=""></div>
+									<a href="tel:+74957393999"><b>+7 (495) 739-39-99</b></a>
+								</div>
+							</div>
 
-							<div class="account">
-								<a href="#login_modal" class="login_link modal_link">
-									<div class="icon">
-										<img src="images/ic_user.svg" alt="">
-									</div>
-									Войти
+							<div class="contacts">
+								<div class="email">
+									<div class="icon"><img src="images/ic_email.png" alt=""></div>
+									<a href="mailto:shop@pneumax.ru">shop@pneumax.ru</a>
+								</div>
+
+								<div class="callback">
+									<div class="icon"><img src="images/ic_callback.png" alt=""></div>
+									<button class="btn">заказать звонок</button>
+								</div>
+							</div>
+
+							<div class="links">
+								<a href="/" class="compare_link">
+									<img src="images/ic_compare.png" alt="">
+								</a>
+
+								<a href="/" class="favorite_link">
+									<img src="images/ic_favorite.png" alt="">
+								</a>
+
+								<a href="/" class="cart_link">
+									<img src="images/ic_cart.png" alt="">
 								</a>
 							</div>
 
-
-							<a href="/" class="cart_link">
-								<span class="count">3</span>
-							</a>
+							<div class="account">
+								<a href="#login_modal" class="login_link modal_link">
+									<img src="images/ic_user.png" alt="">
+									<span>Войти</span>
+								</a>
+							</div>
 						</div>
 					</div>
 
 
 					<div class="bottom">
 						<div class="cont">
-							<div class="logo">
-								<a href="/">
-									<img src="images/logo.png" alt="">
-								</a>
-							</div>
-
-
 							<nav class="menu flex">
 								<div class="item">
-									<a href="/">О компании</a>
+									<a href="/">О нас</a>
 								</div>
 
 								<div class="item">
 									<a href="/">Продукция</a>
+								</div>
+
+								<div class="item">
+									<a href="/">Услуги</a>
+								</div>
+
+								<div class="item">
+									<a href="/">Решения</a>
+								</div>
+
+								<div class="item">
+									<a href="/">Справочные материалы</a>
+								</div>
+
+								<div class="item">
+									<a href="/">Публикации</a>
 								</div>
 
 								<div class="item">
@@ -147,14 +179,7 @@
 								<div class="item">
 									<a href="/">Контакты</a>
 								</div>
-
-								<div class="item">
-									<a href="/" class="techn_portal">
-										<img src="images/ic_techn_portal.svg" alt="">Технический<br> портал
-									</a>
-								</div>
 							</nav>
-
 						</div>
 					</div>
 				</header>
@@ -169,12 +194,7 @@
 							<div class="cats">
 								<div class="modal_cont catalog">
 									<a href="#" class="mini_modal_link catalog_link" data-modal-id="#catalog_modal">
-										ПРОДУКЦИЯ
-										<div class="icon">
-											<span></span>
-											<span></span>
-											<span></span>
-										</div>
+										<span>Каталог</span>
 									</a>
 
 									<div class="mini_modal" id="catalog_modal">
@@ -330,78 +350,88 @@
 								</div>
 
 								<div class="items">
-									<div><a href="/">Собственное производство</a></div>
-									<div><a href="/">Пневматика</a></div>
-									<div><a href="/">Гидравлика</a></div>
-									<div><a href="/">Смазочная техника</a></div>
-									<div><a href="/">Манипуляторы и крановые системы</a></div>
+									<div><a href="/"><span>Гидравлика</span></a></div>
+									<div><a href="/"><span>Пневматика</span></a></div>
+									<div><a href="/"><span>Смазочная техника</span></a></div>
+									<div><a href="/"><span>Гидросистемы пневмакс<sup>®</sup></span></a></div>
+									<div><a href="/"><span>Услуги</span></a></div>
+									<div><a href="/"><span>Акции</span></a></div>
 								</div>
 							</div>
 						</aside>
 
 
 						<section class="content">
+							<div class="search">
+								<form action="">
+									<div class="field">
+										<img src="images/ic_search.png" alt="" class="icon">
+
+										<input type="text" name="" value="" class="input">
+
+										<button type="button" class="clear_btn">
+											<img src="images/ic_clear.png" alt="">
+										</button>
+									</div>
+
+									<button type="submit" class="submit_btn">Найти</button>
+								</form>
+							</div>
+
 							<section class="main_slider">
 								<div class="slider owl-carousel">
 									<div class="slide">
 										<div class="info">
-											<div class="sub_title">Специальное предложение</div>
+											<div class="sub_title">Полный цикл производства</div>
 
-											<div class="title">Продукция собственного производства</div>
+											<div class="title">Мы с вами<br> с 1998 года</div>
 
-											<a href="/" class="link">Посмотреть каталог</a>
+											<a href="/" class="link">Подробнее</a>
 										</div>
 
-										<div class="img">
-											<img data-src="images/tmp/main_slider_img.jpg" alt="" class="lozad">
-										</div>
+										<img data-src="images/tmp/main_slider_img.jpg" alt="" class="bg lozad">
 									</div>
-
 
 									<div class="slide">
 										<div class="info">
-											<div class="sub_title">Специальное предложение</div>
+											<div class="sub_title">Полный цикл производства</div>
 
-											<div class="title">Продукция собственного производства</div>
+											<div class="title">Мы с вами<br> с 1998 года</div>
 
-											<a href="/" class="link">Посмотреть каталог</a>
+											<a href="/" class="link">Подробнее</a>
 										</div>
 
-										<div class="img">
-											<img data-src="images/tmp/main_slider_img.jpg" alt="" class="lozad">
-										</div>
+										<img data-src="images/tmp/main_slider_img.jpg" alt="" class="bg lozad">
 									</div>
 								</div>
-
-								<div class="bg lozad" data-background-image="images/bg_main_slider.jpg"></div>
 							</section>
 						</section>
-
 					</div>
 				</section>
 
 
 				<section class="advantages block">
 					<div class="cont">
-
 						<div class="flex">
 							<div class="item">
 								<div class="icon">
 									<img data-src="images/ic_advantage1.png" alt="" class="lozad">
 								</div>
 
-								<div class="name">Гарантия<br> на все товары</div>
+								<div class="name">Гарантия<br> 2 года</div>
 							</div>
 
+							<div class="sep"></div>
 
 							<div class="item">
 								<div class="icon">
 									<img data-src="images/ic_advantage2.png" alt="" class="lozad">
 								</div>
 
-								<div class="name">Быстрая<br> Доставка</div>
+								<div class="name">Бесплатная<br> доставка</div>
 							</div>
 
+							<div class="sep"></div>
 
 							<div class="item">
 								<div class="icon">
@@ -411,16 +441,26 @@
 								<div class="name">Онлайн<br> оплата</div>
 							</div>
 
+							<div class="sep"></div>
 
 							<div class="item">
 								<div class="icon">
 									<img data-src="images/ic_advantage4.png" alt="" class="lozad">
 								</div>
 
-								<div class="name">техническая<br> поддержка</div>
+								<div class="name">Техническая<br> поддержка</div>
+							</div>
+
+							<div class="sep"></div>
+
+							<div class="item">
+								<div class="icon">
+									<img data-src="images/ic_advantage5.png" alt="" class="lozad">
+								</div>
+
+								<div class="name">1000+<br> проектов в год</div>
 							</div>
 						</div>
-
 					</div>
 				</section>
 

@@ -1,16 +1,16 @@
-$(function(){
+$(function () {
 	// Проверка браузера
-	if ( !supportsCssVars() ) {
+	if (!supportsCssVars()) {
 		$('body').html('<div style="text-align: center; padding: 30px; font-family: Arial, sans-serif;">Ваш браузер устарел рекомендуем обновить его до последней версии<br> или использовать другой более современный</div>')
 	}
 
 
 	// Ленивая загрузка
-	setTimeout(function(){
+	setTimeout(function () {
 		observer = lozad('.lozad', {
 			rootMargin: '200px 0px',
 			threshold: 0,
-			loaded: function(el) {
+			loaded: function (el) {
 				el.classList.add('loaded')
 			}
 		})
@@ -31,8 +31,8 @@ $(function(){
 	$('input[type=tel]').inputmask('+7 (999) 999-99-99')
 
 	// Фокус при клике на название поля
-	$('body').on('click', '.form .label', function() {
-    	$(this).closest('.line').find('.input, textarea').focus()
+	$('body').on('click', '.form .label', function () {
+		$(this).closest('.line').find('.input, textarea').focus()
 	})
 
 
@@ -46,7 +46,7 @@ $(function(){
 	$.fancybox.defaults.speed = 500
 	$.fancybox.defaults.gutter = 40
 	$.fancybox.defaults.i18n = {
-		'en' : {
+		'en': {
 			CLOSE: "Закрыть",
 			NEXT: "Следующий",
 			PREV: "Предыдущий",
@@ -62,14 +62,14 @@ $(function(){
 	}
 
 	// Всплывающие окна
-	$('body').on('click', '.modal_link', function(e) {
+	$('body').on('click', '.modal_link', function (e) {
 		e.preventDefault()
 
 		$.fancybox.close(true)
 
 		$.fancybox.open({
-			src  : $(this).attr('href'),
-			type : 'inline'
+			src: $(this).attr('href'),
+			type: 'inline'
 		})
 	})
 
@@ -81,105 +81,115 @@ $(function(){
 	firstClick = false
 
 	// Закрываем всплывашку при клике за её пределами
-	$(document).click(function(e){
-	    if ( !firstClick && $(e.target).closest('.mini_modal').length == 0 ){
-	        $('.mini_modal, .mini_modal_link').removeClass('active')
+	$(document).click(function (e) {
+		if (!firstClick && $(e.target).closest('.mini_modal').length == 0) {
+			$('.mini_modal, .mini_modal_link').removeClass('active')
 
-			if( $(window).width() < 1024 ){
+			if ($(window).width() < 1024) {
 				$('body').css('cursor', 'default')
 			}
-	    }
+		}
 
-	    firstClick = false
+		firstClick = false
 	})
 
-	$('.mini_modal_link').click(function(e){
-	    e.preventDefault()
+	$('.mini_modal_link').click(function (e) {
+		e.preventDefault()
 
-	    let modalId = $(this).data('modal-id')
+		let modalId = $(this).data('modal-id')
 
-	    if( $(this).hasClass('active') ){
-	        $(this).removeClass('active')
-	      	$('.mini_modal').removeClass('active')
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active')
+			$('.mini_modal').removeClass('active')
 
-	        firstClick = false
+			firstClick = false
 
-			if( $(window).width() < 1024 ){
+			if ($(window).width() < 1024) {
 				$('body').css('cursor', 'default')
 			}
-	    }else{
-	        $('.mini_modal_link').removeClass('active')
-	        $(this).addClass('active')
+		} else {
+			$('.mini_modal_link').removeClass('active')
+			$(this).addClass('active')
 
-	        $('.mini_modal').removeClass('active')
-	        $(modalId).addClass('active')
+			$('.mini_modal').removeClass('active')
+			$(modalId).addClass('active')
 
-	        firstClick = true
+			firstClick = true
 
-			if( $(window).width() < 1024 ){
+			if ($(window).width() < 1024) {
 				$('body').css('cursor', 'pointer')
 			}
-	    }
+		}
 	})
 
 
 	// Изменение количества товара
-	$('body').on('click', '.amount .minus', function(e) {
-	    e.preventDefault()
+	$('body').on('click', '.amount .minus', function (e) {
+		e.preventDefault()
 
-	    let parent = $(this).closest('.amount')
-	    let input = parent.find('input')
-	    let inputVal = parseFloat( input.val() )
-	    let minimum = parseFloat( input.data('minimum') )
-	    let step = parseFloat( input.data('step') )
+		let parent = $(this).closest('.amount')
+		let input = parent.find('input')
+		let inputVal = parseFloat(input.val())
+		let minimum = parseFloat(input.data('minimum'))
+		let step = parseFloat(input.data('step'))
 
-	    if( inputVal > minimum ){
-	    	input.val( inputVal-step )
-	    }
+		if (inputVal > minimum) {
+			input.val(inputVal - step)
+		}
 	})
 
-	$('body').on('click', '.amount .plus', function(e) {
-	    e.preventDefault()
+	$('body').on('click', '.amount .plus', function (e) {
+		e.preventDefault()
 
-	    let parent = $(this).closest('.amount')
-	    let input = parent.find('input')
-	    let inputVal = parseFloat( input.val() )
-	    let maximum = parseFloat( input.data('maximum') )
-	    let step = parseFloat( input.data('step') )
+		let parent = $(this).closest('.amount')
+		let input = parent.find('input')
+		let inputVal = parseFloat(input.val())
+		let maximum = parseFloat(input.data('maximum'))
+		let step = parseFloat(input.data('step'))
 
-	    if( inputVal < maximum ){
-	    	input.val( inputVal+step )
-	    }
+		if (inputVal < maximum) {
+			input.val(inputVal + step)
+		}
 	})
 
 
 	// Моб. меню
-	$('body').on('click', '.mob_header .mob_menu_link', function(e) {
-    	e.preventDefault()
+	$('body').on('click', '.mob_header .mob_menu_link', function (e) {
+		e.preventDefault()
 
-		if( $(this).hasClass('active') ) {
+		if ($(this).hasClass('active')) {
 			$('body').removeClass('lock')
-        	$('.header_wrap').removeClass('show')
+			$('.header_wrap').removeClass('show')
 			$('.overlay').fadeOut(300)
 		} else {
 			$('body').addClass('lock')
 			$('.header_wrap').addClass('show')
 			$('.overlay').fadeIn(300)
 		}
-    })
+	})
 
-	$('body').on('click', '.header_wrap .close, .overlay', function(e) {
-    	e.preventDefault()
+	$('body').on('click', '.header_wrap .close, .overlay', function (e) {
+		e.preventDefault()
 
 		$('body').removeClass('lock')
 		$('.header_wrap').removeClass('show')
 		$('.overlay').fadeOut(300)
-    })
+	})
+
+
+	// Моб. версия
+	firstResize = false
+
+	if (document.body.clientWidth < 375) {
+		document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
+
+		firstResize = true
+	}
 })
 
 
 
-$(window).load(function(){
+$(window).load(function () {
 	// Шапка
 	let headerHeight = $('header').innerHeight()
 
@@ -189,28 +199,28 @@ $(window).load(function(){
 
 
 
-$(window).resize(function(){
+$(window).resize(function () {
 	// Шапка
 	$('.header_wrap').height('auto')
 
-	setTimeout(function(){
-		$('.header_wrap').height( $('header').innerHeight() )
+	setTimeout(function () {
+		$('.header_wrap').height($('header').innerHeight())
 	}, 100)
 
-	if( $(window).scrollTop() > $('.header_wrap').innerHeight() ) {
+	if ($(window).scrollTop() > $('.header_wrap').innerHeight()) {
 		$('header').addClass('fixed')
-	}else{
+	} else {
 		$('header').removeClass('fixed')
 	}
 })
 
 
 
-$(window).scroll(function(){
+$(window).scroll(function () {
 	// Шапка
-	if( $(window).scrollTop() > $('.header_wrap').innerHeight() ) {
+	if ($(window).scrollTop() > $('.header_wrap').innerHeight()) {
 		$('header').addClass('fixed')
-	}else{
+	} else {
 		$('header').removeClass('fixed')
 	}
 })
@@ -218,45 +228,45 @@ $(window).scroll(function(){
 
 
 // Вспомогательные функции
-function setHeight(className){
-    let maxheight = 0
-    let object = $(className)
+function setHeight(className) {
+	let maxheight = 0
+	let object = $(className)
 
-    object.each(function() {
-    	let elHeight = $(this).innerHeight()
+	object.each(function () {
+		let elHeight = $(this).innerHeight()
 
-        if( elHeight > maxheight ) {
-        	maxheight = elHeight
-        }
-    })
+		if (elHeight > maxheight) {
+			maxheight = elHeight
+		}
+	})
 
-    object.innerHeight( maxheight )
+	object.innerHeight(maxheight)
 }
 
 
 function widthScroll() {
-    let div = document.createElement('div')
-    div.style.overflowY = 'scroll'
-    div.style.width = '50px'
-    div.style.height = '50px'
-    div.style.visibility = 'hidden'
-    document.body.appendChild(div)
+	let div = document.createElement('div')
+	div.style.overflowY = 'scroll'
+	div.style.width = '50px'
+	div.style.height = '50px'
+	div.style.visibility = 'hidden'
+	document.body.appendChild(div)
 
-    let scrollWidth = div.offsetWidth - div.clientWidth
-    document.body.removeChild(div)
+	let scrollWidth = div.offsetWidth - div.clientWidth
+	document.body.removeChild(div)
 
-    return scrollWidth
+	return scrollWidth
 }
 
 
-var supportsCssVars = function() {
-    var s = document.createElement('style'),
-        support
+var supportsCssVars = function () {
+	var s = document.createElement('style'),
+		support
 
-    s.innerHTML = ":root { --tmp-var: bold; }"
-    document.head.appendChild(s)
-    support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'))
-    s.parentNode.removeChild(s)
+	s.innerHTML = ":root { --tmp-var: bold; }"
+	document.head.appendChild(s)
+	support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'))
+	s.parentNode.removeChild(s)
 
-    return support
+	return support
 }
