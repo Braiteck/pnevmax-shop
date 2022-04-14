@@ -5,7 +5,55 @@
     ---------------*/
     :root
     {
+        --aside_width: 290px;
         --aside_big_width: 316px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        min-height: 92px;
+        padding-right: 91px;
+        padding-left: 23px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        right: 23px;
+
+        width: 35px;
+        height: 35px;
+    }
+
+    .accordion_item .head .icon:before,
+    .accordion_item .head .icon:after
+    {
+        width: 19px;
+        height: 3px;
+    }
+
+    .accordion_item .head .icon:after
+    {
+        width: 3px;
+        height: 19px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 91px 23px 23px;
     }
 
 
@@ -117,9 +165,37 @@
 
 
 
+    aside .help
+    {
+        padding: 19px;
+    }
+
+    aside .help .text
+    {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    aside .help .email
+    {
+        font-size: 20px;
+
+        margin-top: 16px;
+    }
+
+
+
     /*---------------
        Main section
     ---------------*/
+    .text_block
+    {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+
+
     .search
     {
         margin-bottom: 10px;

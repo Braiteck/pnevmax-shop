@@ -72,7 +72,7 @@ button[type=reset]
 :root
 {
     --bg: #fff;
-    --aside_width: 290px;
+    --aside_width: 372px;
     --aside_big_width: 412px;
     --scroll_width: 17px;
     --text_color: #000;
@@ -808,8 +808,9 @@ body.show
 
 .text_block
 {
+    font-size: 18px;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 28px;
 }
 
 .text_block > :last-child,
@@ -970,19 +971,21 @@ body.show
     top: 0;
     left: 0;
 
-    content: counter(li)'.';
+    content: counter(li) '.';
     counter-increment: li;
 }
 
 
 .text_block a
 {
-    color: #00964c;
+    color: #2a9d31;
+
+    text-decoration: none;
 }
 
 .text_block a:hover
 {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
@@ -1122,6 +1125,111 @@ body.show
     pointer-events: auto;
 
     opacity: 1;
+}
+
+
+
+/*---------------
+    Accordion
+---------------*/
+.accordion_item
+{
+    border: 1px solid #d3d3d3;
+}
+
+.accordion_item + .accordion_item
+{
+    margin-top: -1px;
+}
+
+
+.accordion_item .head
+{
+    position: relative;
+
+    display: flex;
+
+    min-height: 102px;
+    padding: 15px 103px 15px 42px;
+
+    cursor: pointer;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.accordion_item .head .title
+{
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+.accordion_item .head .icon
+{
+    position: absolute;
+    top: 0;
+    right: 31px;
+    bottom: 0;
+
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    transition: background .2s linear;
+
+    border-radius: 50%;
+    background: #5bb660;
+}
+
+.accordion_item .head .icon:before,
+.accordion_item .head .icon:after
+{
+    position: absolute;
+
+    display: block;
+
+    width: 22px;
+    height: 4px;
+    margin: auto;
+
+    content: '';
+
+    border-radius: 3px;
+    background: #fff;
+
+    inset: 0;
+}
+
+.accordion_item .head .icon:after
+{
+    width: 4px;
+    height: 22px;
+
+    transition: opacity .2s linear;
+}
+
+
+.accordion_item .data
+{
+    display: none;
+
+    padding: 0 103px 55px 42px;
+}
+
+
+.accordion_item.active .head .icon
+{
+    background: #bbb;
+}
+
+.accordion_item.active .head .icon:after
+{
+    opacity: 0;
 }
 
 
@@ -2304,6 +2412,83 @@ aside .filter .label_content
 aside .filter input[type=checkbox]:checked ~ .label_content
 {
     display: block;
+}
+
+
+
+aside .help
+{
+    padding: 25px;
+
+    border: 1px solid #dcdcdc;
+    background: #f6f5f6;
+}
+
+
+aside .help .icon
+{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: #5bb660;
+}
+
+aside .help .icon:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: auto;
+
+    content: '';
+
+    opacity: .5;
+    border: 1px solid;
+    border-radius: inherit;
+}
+
+
+aside .help .text
+{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+
+aside .help .email
+{
+    color: #5bb660;
+    font-size: 24px;
+    font-weight: 500;
+
+    margin-top: 20px;
+}
+
+aside .help .email a
+{
+    color: currentColor;
+
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 
@@ -5932,6 +6117,13 @@ aside .filter input[type=checkbox]:checked ~ .label_content
 .reviews .owl-carousel .owl-nav button.owl-next
 {
     right: -15px;
+}
+
+
+
+.faq
+{
+    margin-bottom: 50px;
 }
 
 

@@ -5,7 +5,31 @@
     ---------------*/
     :root
     {
+        --aside_width: 320px;
         --aside_big_width: 360px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-left: 31px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 103px 31px 31px;
     }
 
 
@@ -116,9 +140,35 @@
 
 
 
+    aside .help
+    {
+        padding: 23px;
+    }
+
+    aside .help .text
+    {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    aside .help .email
+    {
+        font-size: 22px;
+    }
+
+
+
     /*---------------
        Main section
     ---------------*/
+    .text_block
+    {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+
+
     .search
     {
         margin-bottom: 12px;

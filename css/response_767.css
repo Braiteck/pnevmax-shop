@@ -51,6 +51,53 @@
 
 
     /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        min-height: 84px;
+        padding-right: 71px;
+        padding-left: 19px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        right: 19px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .accordion_item .head .icon:before,
+    .accordion_item .head .icon:after
+    {
+        width: 16px;
+        height: 2px;
+    }
+
+    .accordion_item .head .icon:after
+    {
+        width: 2px;
+        height: 16px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding: 0 19px 19px 19px;
+    }
+
+
+
+    /*---------------
         Header
     ---------------*/
     .mob_header

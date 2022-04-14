@@ -52,6 +52,17 @@
 
 
 
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head .title
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
     /*----------
         Tabs
     ----------*/
@@ -307,9 +318,32 @@
 
 
 
+    aside .help .text
+    {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    aside .help .email
+    {
+        font-size: 19px;
+
+        margin-top: 12px;
+    }
+
+
+
     /*---------------
         Main section
     ---------------*/
+    .text_block
+    {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+
+
     .search .field
     {
         width: calc(100% - 140px);
@@ -783,6 +817,13 @@
     {
         font-size: 20px;
         line-height: 24px;
+    }
+
+
+
+    .faq
+    {
+        margin-bottom: 40px;
     }
 
 
