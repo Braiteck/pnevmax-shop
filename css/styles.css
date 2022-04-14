@@ -1035,6 +1035,97 @@ body.show
 
 
 
+/*----------
+    Tabs
+----------*/
+.tabs
+{
+    display: flex;
+
+    margin-bottom: 32px;
+
+    border-bottom: 1px solid #e0e0e0;
+
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+
+.tabs button
+{
+    color: #323333;
+    font-family: var(--font_family);
+    font-size: 16px;
+    font-weight: 700;
+
+    position: relative;
+
+    display: flex;
+
+    height: 60px;
+    margin-bottom: -1px;
+    padding: 10px 30px;
+
+    cursor: pointer;
+    transition: .2s linear;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: 1px solid #e0e0e0;
+    background: none;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.tabs button + button
+{
+    margin-left: -1px;
+}
+
+.tabs button:hover,
+.tabs button.active
+{
+    color: #fff;
+
+    border-color: #429454;
+    background: #429454;
+}
+
+
+.tab_content
+{
+    position: relative;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    height: 0;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.tab_content.active
+{
+    visibility: visible;
+    overflow: visible;
+
+    height: auto;
+
+    transition: opacity .5s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+
 /*---------------
    Header
 ---------------*/

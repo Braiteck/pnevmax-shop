@@ -52,6 +52,19 @@
 
 
 
+    /*----------
+        Tabs
+    ----------*/
+    .tabs button
+    {
+        font-size: 15px;
+
+        height: 48px;
+        padding: 11px 23px;
+    }
+
+
+
     /*---------------
         Header
     ---------------*/
