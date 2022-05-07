@@ -37,83 +37,30 @@
     /*---------------
         Header
     ---------------*/
-    header,
-    .header_wrap
-    {
-        margin-bottom: 32px;
-    }
-
-
     header .info
     {
-        padding: 32px 0;
-    }
-
-    header:before
-    {
-        height: calc(100% - 30px);
-    }
-
-
-    header .logo
-    {
-        margin-left: 0;
-    }
-
-    header .logo img
-    {
-        height: 30px;
+        padding: 24px 0;
     }
 
 
     header .contacts > *
     {
-        font-size: 19px;
-        line-height: 31px;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     header .contacts .icon
     {
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
     }
 
-
-    header .links img
-    {
-        max-width: 36px;
-        max-height: 36px;
-    }
-
-
-    header .account
-    {
-        margin-right: 0;
-    }
-
-
-    header .account .login_link
-    {
-        font-size: 15px;
-    }
-
-    header .account .login_link img
-    {
-        width: 24px;
-        margin-right: 12px;
-    }
-
-
-    header .menu
-    {
-        padding: 0 24px;
-    }
 
     header .menu .item > a
     {
-        font-size: 17px;
+        font-size: 15px;
 
-        height: 60px;
+        height: 56px;
     }
 
 
@@ -123,19 +70,21 @@
     ---------------*/
     aside .cats .catalog_link
     {
-        font-size: 18px;
+        font-size: 17px;
 
         min-height: 60px;
-        padding: 12px 32px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
 
 
     aside .cats .items a
     {
-        font-size: 18px;
+        font-size: 15px;
 
-        min-height: 64px;
-        padding: 12px 24px 12px 32px;
+        min-height: 60px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
 
 
@@ -169,50 +118,44 @@
 
 
 
-    .search
-    {
-        margin-bottom: 12px;
-    }
-
-
     .search .field
     {
-        width: calc(100% - 180px);
+        width: calc(100% - 168px);
     }
 
 
     .search .icon
     {
-        left: 20px;
+        left: 16px;
+
+        width: 26px;
+        height: 26px;
+    }
+
+
+    .search .input
+    {
+        font-size: 16px;
+
+        height: 56px;
+        padding: 0 72px 0 60px;
+    }
+
+
+    .search .clear_btn
+    {
+        right: 20px;
 
         width: 28px;
         height: 28px;
     }
 
 
-    .search .input
+    .search .submit_btn
     {
         font-size: 18px;
 
-        height: 56px;
-        padding: 0 80px 0 68px;
-    }
-
-
-    .search .clear_btn
-    {
-        right: 24px;
-
-        width: 32px;
-        height: 32px;
-    }
-
-
-    .search .submit_btn
-    {
-        font-size: 20px;
-
-        width: 180px;
+        width: 164px;
         height: 56px;
     }
 
@@ -220,74 +163,67 @@
 
     .main_slider .owl-carousel .owl-nav button.owl-prev
     {
-        left: 10px;
+        left: 8px;
     }
 
     .main_slider .owl-carousel .owl-nav button.owl-next
     {
-        right: 10px;
-    }
-
-    .main_slider .owl-carousel .owl-nav button:after
-    {
-        width: 24px;
-        height: 24px;
-        margin-top: -12px;
+        right: 8px;
     }
 
 
     .main_slider .info
     {
-        width: 516px;
-        height: 378px;
-        padding: 40px 88px;
+        width: 520px;
+        height: 358px;
+        padding: 40px 92px;
     }
-
 
     .main_slider .sub_title
     {
-        font-size: 18px;
+        font-size: 15px;
 
-        margin-bottom: 32px;
+        margin-bottom: 20px;
     }
 
     .main_slider .title
     {
-        font-size: 44px;
-        line-height: 50px;
+        font-size: 36px;
     }
 
     .main_slider .link
     {
-        font-size: 18px;
-        line-height: 48px;
+        font-size: 16px;
+        line-height: 36px;
 
-        margin-top: 32px;
-        padding: 0 40px;
+        margin-top: 28px;
+        padding: 2px 32px;
     }
 
 
 
     .advantages .flex
     {
-        padding: 12px 24px;
+        padding: 15px 39px;
+    }
+
+
+    .advantages .item
+    {
+        font-size: 17px;
+    }
+
+    .advantages .item .icon
+    {
+        max-width: 56px;
+        max-height: 56px;
+        margin-right: 20px;
     }
 
 
     .advantages .sep
     {
         height: 80px;
-    }
-
-
-    .advantages .item
-    {
-        font-size: 19px;
-    }
-
-    .advantages .item img
-    {
-        max-width: 64px;
-        max-height: 64px;
+        margin: 0 16px;
     }
 }

@@ -46,18 +46,6 @@
     }
 
 
-    .mob_header .links img
-    {
-        max-width: 22px;
-        max-height: 22px;
-    }
-
-
-    .mob_header .account
-    {
-        margin-left: 22px;
-    }
-
     .mob_header .account .login_link img
     {
         width: 18px;
@@ -74,15 +62,7 @@
 
 
 
-    header .menu
-    {
-        width: calc(100% + 40px);
-        margin-right: -20px;
-        margin-left: -20px;
-        padding: 20px;
-    }
-
-
+    header .menu,
     header .info
     {
         padding: 20px;
@@ -99,45 +79,17 @@
     /*---------------
         Main section
     ---------------*/
-    .main_slider .sub_title
-    {
-        font-size: 16px;
-
-        margin-bottom: 20px;
-    }
-
-    .main_slider .title
-    {
-        font-size: 30px;
-        line-height: 38px;
-    }
-
-    .main_slider .link
-    {
-        font-size: 16px;
-
-        margin-top: 20px;
-        padding: 0 28px;
-    }
-
-
-
     .advantages .item
     {
-        font-size: 14px;
-
         justify-content: flex-start;
     }
 
+
     .advantages .item .icon
     {
+        max-width: 40px;
+        max-height: 40px;
         margin-right: 12px;
-    }
-
-    .advantages .item img
-    {
-        max-width: 44px;
-        max-height: 44px;
     }
 
 

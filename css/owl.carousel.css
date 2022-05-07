@@ -382,19 +382,19 @@
 
 .main_slider .owl-carousel .owl-nav button.owl-prev
 {
-    left: 20px;
+    left: 12px;
 }
 
 .main_slider .owl-carousel .owl-nav button.owl-next
 {
-    right: 20px;
+    right: 12px;
 }
 
 .main_slider .owl-carousel .owl-nav button:after
 {
-    width: 28px;
-    height: 28px;
-    margin-top: -14px;
+    width: 22px;
+    height: 22px;
+    margin-top: -12px;
 
     border-color: #3bbc62;
 }

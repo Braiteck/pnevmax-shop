@@ -58,8 +58,7 @@
     /*---------------
         Sidebar
     ---------------*/
-    aside,
-    aside.big
+    aside
     {
         position: relative;
 
@@ -146,11 +145,6 @@
     /*---------------
         Main section
     ---------------*/
-    .advantages
-    {
-        margin-top: 24px;
-    }
-
     .advantages .flex
     {
         padding: 16px 16px 1px;

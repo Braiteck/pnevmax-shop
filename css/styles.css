@@ -73,7 +73,6 @@ button[type=reset]
 {
     --bg: #fff;
     --aside_width: 372px;
-    --aside_big_width: 412px;
     --scroll_width: 17px;
     --text_color: #000;
     --font_size: 14px;
@@ -162,7 +161,7 @@ body.show
     position: relative;
 
     width: 100%;
-    max-width: 1920px;
+    max-width: 1560px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -298,13 +297,6 @@ body.show
     position: relative;
 
     width: calc(100% - var(--aside_width) - 33px);
-}
-
-.content_flex aside.big + .content
-{
-    position: relative;
-
-    width: calc(100% - var(--aside_big_width) - 24px);
 }
 
 .content_flex .content > :first-child
@@ -1239,7 +1231,7 @@ body.show
 ---------------*/
 .header_wrap
 {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 .header_wrap header
@@ -1256,7 +1248,7 @@ header
     left: 0;
 
     width: 100%;
-    margin: 0 0 40px;
+    margin: 0 0 32px;
 }
 
 header.absolute
@@ -1301,7 +1293,7 @@ header:before
 header .info
 {
     /* margin-bottom: -51px; */
-    padding: 36px 0;
+    padding: 26px 0;
 }
 
 header .info .cont.flex
@@ -1318,7 +1310,7 @@ header .logo
 {
     display: block;
 
-    margin-left: 34px;
+    margin-left: 32px;
 
     text-decoration: none;
 }
@@ -1327,6 +1319,7 @@ header .logo img
 {
     display: block;
 
+    width: 280px;
     max-width: 100%;
 }
 
@@ -1335,9 +1328,9 @@ header .logo img
 header .contacts > *
 {
     color: #fff;
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 500;
-    line-height: 35px;
+    line-height: 25px;
 
     display: flex;
 
@@ -1345,6 +1338,11 @@ header .contacts > *
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+}
+
+header .contacts > * + *
+{
+    margin-top: 8px;
 }
 
 
@@ -1382,9 +1380,9 @@ header .contacts .icon
 {
     display: flex;
 
-    width: 33px;
-    height: 33px;
-    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 
     justify-content: center;
     align-items: center;
@@ -1416,6 +1414,9 @@ header .links a
 {
     display: flex;
 
+    width: 32px;
+    height: 32px;
+
     text-decoration: none;
 
     justify-content: flex-start;
@@ -1441,14 +1442,14 @@ header .links img
 
 header .account
 {
-    margin-right: 34px;
+    margin-right: 32px;
 }
 
 
 header .account .login_link
 {
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
 
     display: flex;
@@ -1466,7 +1467,8 @@ header .account .login_link img
 {
     display: block;
 
-    margin-right: 18px;
+    width: 22px;
+    margin-right: 16px;
 }
 
 
@@ -1545,7 +1547,7 @@ header .menu
     display: flex;
 
     width: 100%;
-    padding: 0 44px;
+    padding: 0 32px;
 
     background: #ebebeb;
 
@@ -1563,7 +1565,7 @@ header .menu .item
 header .menu .item > a
 {
     color: #3e3e3e;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
     line-height: normal;
 
@@ -1571,7 +1573,7 @@ header .menu .item > a
 
     display: flex;
 
-    height: 75px;
+    height: 60px;
 
     transition: color .2s linear;
     text-align: center;
@@ -1647,7 +1649,7 @@ header.fixed .menu
     display: none;
 
     margin-bottom: 24px;
-    padding: 24px 0;
+    padding: 20px 0;
 
     background: #3e3e3e;
 }
@@ -1674,7 +1676,7 @@ header.fixed .menu
     display: block;
 
     max-width: 100%;
-    height: 30px;
+    height: 28px;
 
     text-decoration: none;
 }
@@ -1712,8 +1714,8 @@ header.fixed .menu
 {
     display: block;
 
-    max-width: 28px;
-    max-height: 28px;
+    max-width: 26px;
+    max-height: 26px;
 }
 
 
@@ -1727,7 +1729,7 @@ header.fixed .menu
 .mob_header .account .login_link
 {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 
     display: flex;
@@ -1745,8 +1747,8 @@ header.fixed .menu
 {
     display: block;
 
-    width: 22px;
-    margin-right: 12px;
+    width: 20px;
+    margin-right: 8px;
 }
 
 
@@ -1878,11 +1880,6 @@ aside
     max-width: 100%;
 }
 
-aside.big
-{
-    width: var(--aside_big_width);
-}
-
 aside > * + *
 {
     margin-top: 30px;
@@ -1898,7 +1895,7 @@ aside .cats .catalog
 aside .cats .catalog_link
 {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 
     position: relative;
@@ -1906,13 +1903,13 @@ aside .cats .catalog_link
 
     display: flex;
 
-    min-height: 76px;
-    padding: 15px 44px;
+    min-height: 64px;
+    padding: 12px 32px;
 
     text-decoration: none;
     text-transform: uppercase;
 
-    border-radius: 15px 15px 0 0;
+    border-radius: 12px 12px 0 0;
     background: #3e3e3e;
 
     justify-content: flex-start;
@@ -2076,13 +2073,13 @@ aside .cats .items > * + *
 aside .cats .items a
 {
     color: #3e3e3e;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
 
     display: flex;
 
-    min-height: 81px;
-    padding: 15px 32px 15px 44px;
+    min-height: 64px;
+    padding: 12px 24px 12px 32px;
 
     transition: background .2s linear;
     text-decoration: none;
@@ -2098,7 +2095,7 @@ aside .cats .items a
 
 aside .cats .items a sup
 {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 100%;
 
     display: inline-block;
@@ -2518,12 +2515,13 @@ aside .help .email a
 
 .search
 {
-    margin-bottom: 17px;
-    padding: 4px;
+    margin-bottom: 12px;
+    padding: 2px;
 
-    border-radius: 15px;
+    border-radius: 14px;
     background: #3e3e3e;
 }
+
 
 .search form
 {
@@ -2535,11 +2533,12 @@ aside .help .email a
     flex-wrap: wrap;
 }
 
+
 .search .field
 {
     position: relative;
 
-    width: calc(100% - 201px);
+    width: calc(100% - 192px);
 }
 
 .search .icon
@@ -2548,47 +2547,49 @@ aside .help .email a
     z-index: 3;
     top: 0;
     bottom: 0;
-    left: 23px;
+    left: 18px;
 
     display: block;
 
-    width: 38px;
-    height: 38px;
+    width: 28px;
+    height: 28px;
     margin: auto;
 
     pointer-events: none;
 }
 
+
 .search .input
 {
     color: var(--text_color);
     font-family: var(--font_family);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
 
     display: block;
 
     width: 100%;
-    height: 68px;
-    padding: 0 98px 0 84px;
+    height: 60px;
+    padding: 0 80px 0 68px;
 
     border: none;
     border-radius: 12px;
     background: #fff;
 }
 
+
 .search .clear_btn
 {
     position: absolute;
     z-index: 3;
     top: 0;
-    right: 30px;
+    right: 22px;
     bottom: 0;
 
     display: flex;
 
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     margin: auto;
 
     cursor: pointer;
@@ -2610,17 +2611,18 @@ aside .help .email a
     max-height: 100%;
 }
 
+
 .search .submit_btn
 {
     color: #fff;
     font-family: var(--font_family);
-    font-size: 23px;
+    font-size: 19px;
     font-weight: 500;
 
     display: block;
 
-    width: 197px;
-    height: 68px;
+    width: 180px;
+    height: 60px;
 
     cursor: pointer;
 
@@ -2638,7 +2640,7 @@ aside .help .email a
 
     overflow: hidden;
 
-    border-radius: 15px;
+    border-radius: 14px;
     background: #ddd;
 }
 
@@ -2664,10 +2666,10 @@ aside .help .email a
 
     display: flex;
 
-    width: 625px;
+    width: 560px;
     max-width: 100%;
-    height: 476px;
-    padding: 50px 134px;
+    height: 382px;
+    padding: 40px 100px;
 
     justify-content: flex-start;
     align-items: center;
@@ -2679,20 +2681,20 @@ aside .help .email a
 .main_slider .sub_title
 {
     color: #00b600;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
 
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
 }
 
 
 .main_slider .title
 {
     color: #3e3e3e;
-    font-size: 52px;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 55px;
+    line-height: calc(100% + 6px);
 
     width: 100%;
 }
@@ -2701,14 +2703,14 @@ aside .help .email a
 .main_slider .link
 {
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
-    line-height: 50px;
+    line-height: 40px;
 
     display: inline-block;
 
-    margin-top: 50px;
-    padding: 0 54px;
+    margin-top: 32px;
+    padding: 2px 40px;
 
     transition: background .2s linear;
     text-align: center;
@@ -2760,7 +2762,7 @@ aside .help .email a
 .advantages .item
 {
     color: #3e3e3e;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 600;
 
     position: relative;
@@ -2775,12 +2777,15 @@ aside .help .email a
 
 .advantages .item .icon
 {
-    margin-right: 28px;
+    margin-right: 23px;
 }
 
 .advantages .item img
 {
     display: block;
+
+    max-width: 100%;
+    max-height: 100%;
 }
 
 

@@ -102,7 +102,7 @@
     ---------------*/
     .mob_header
     {
-        padding: 20px 0;
+        padding: 16px 0;
     }
 
 
@@ -120,19 +120,19 @@
 
     .mob_header .links img
     {
-        max-width: 24px;
-        max-height: 24px;
+        max-width: 22px;
+        max-height: 22px;
     }
 
 
     .mob_header .account
     {
-        margin-left: 24px;
+        margin-left: 22px;
     }
 
     .mob_header .account .login_link img
     {
-        width: 20px;
+        width: 18px;
         margin-right: 0;
     }
 
@@ -144,7 +144,7 @@
 
     .mob_header .mob_menu_link
     {
-        width: 46px;
+        width: 42px;
         margin-right: -8px;
         margin-left: 16px;
         padding: 0 8px;
@@ -234,14 +234,13 @@
         text-align: center;
     }
 
-    .main_slider .sub_title
+    .main_slider .title
     {
-        margin-bottom: 24px;
+        font-size: 28px;
     }
 
     .main_slider .link
     {
-        margin-top: 24px;
         margin-right: auto;
         margin-left: auto;
     }
