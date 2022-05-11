@@ -72,7 +72,8 @@ button[type=reset]
 :root
 {
     --bg: #fff;
-    --aside_width: 372px;
+    --aside_width: 290px;
+    --aside_big_width: 320px;
     --scroll_width: 17px;
     --text_color: #000;
     --font_size: 14px;
@@ -161,9 +162,9 @@ body.show
     position: relative;
 
     width: 100%;
-    max-width: 1560px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 20px;
 }
 
 
@@ -297,6 +298,11 @@ body.show
     position: relative;
 
     width: calc(100% - var(--aside_width) - 33px);
+}
+
+.content_flex aside.big + .content
+{
+    width: calc(100% - var(--aside_big_width) - 40px);
 }
 
 .content_flex .content > :first-child
@@ -1293,7 +1299,7 @@ header:before
 header .info
 {
     /* margin-bottom: -51px; */
-    padding: 26px 0;
+    padding: 20px 0;
 }
 
 header .info .cont.flex
@@ -1319,7 +1325,7 @@ header .logo img
 {
     display: block;
 
-    width: 280px;
+    width: 260px;
     max-width: 100%;
 }
 
@@ -1328,9 +1334,9 @@ header .logo img
 header .contacts > *
 {
     color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 19px;
 
     display: flex;
 
@@ -1380,9 +1386,9 @@ header .contacts .icon
 {
     display: flex;
 
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 
     justify-content: center;
     align-items: center;
@@ -1412,14 +1418,18 @@ header .links
 
 header .links a
 {
+    color: #fff;
+
+    position: relative;
+
     display: flex;
 
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
 
     text-decoration: none;
 
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
@@ -1427,7 +1437,7 @@ header .links a
 
 header .links a + a
 {
-    margin-left: 20px;
+    margin-left: 24px;
 }
 
 header .links img
@@ -1436,6 +1446,27 @@ header .links img
 
     max-width: 100%;
     max-height: 100%;
+}
+
+header .links .count
+{
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 19px;
+
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    display: block;
+
+    width: 19px;
+    height: 19px;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: #e22323;
 }
 
 
@@ -1449,8 +1480,9 @@ header .account
 header .account .login_link
 {
     color: #fff;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
 
     display: flex;
 
@@ -1467,8 +1499,8 @@ header .account .login_link img
 {
     display: block;
 
-    width: 22px;
-    margin-right: 16px;
+    width: 18px;
+    margin-right: 12px;
 }
 
 
@@ -1565,7 +1597,7 @@ header .menu .item
 header .menu .item > a
 {
     color: #3e3e3e;
-    font-size: 17px;
+    font-size: 13px;
     font-weight: 700;
     line-height: normal;
 
@@ -1573,7 +1605,7 @@ header .menu .item > a
 
     display: flex;
 
-    height: 60px;
+    height: 51px;
 
     transition: color .2s linear;
     text-align: center;
@@ -1695,11 +1727,15 @@ header.fixed .menu
 
 .mob_header .links a
 {
+    color: #fff;
+
+    position: relative;
+
     display: flex;
 
     text-decoration: none;
 
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
@@ -1707,7 +1743,7 @@ header.fixed .menu
 
 .mob_header .links a + a
 {
-    margin-left: 20px;
+    margin-left: 24px;
 }
 
 .mob_header .links img
@@ -1716,6 +1752,27 @@ header.fixed .menu
 
     max-width: 26px;
     max-height: 26px;
+}
+
+.mob_header .links .count
+{
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 16px;
+
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: #e22323;
 }
 
 
@@ -1729,7 +1786,7 @@ header.fixed .menu
 .mob_header .account .login_link
 {
     color: #fff;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
 
     display: flex;
@@ -1747,7 +1804,7 @@ header.fixed .menu
 {
     display: block;
 
-    width: 20px;
+    width: 18px;
     margin-right: 8px;
 }
 
@@ -1895,16 +1952,17 @@ aside .cats .catalog
 aside .cats .catalog_link
 {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
+    line-height: 20px;
 
     position: relative;
     z-index: 100;
 
     display: flex;
 
-    min-height: 64px;
-    padding: 12px 32px;
+    min-height: 60px;
+    padding: 12px 20px;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -2073,13 +2131,14 @@ aside .cats .items > * + *
 aside .cats .items a
 {
     color: #3e3e3e;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
 
     display: flex;
 
-    min-height: 64px;
-    padding: 12px 24px 12px 32px;
+    min-height: 60px;
+    padding: 12px 20px;
 
     transition: background .2s linear;
     text-decoration: none;
@@ -2095,7 +2154,7 @@ aside .cats .items a
 
 aside .cats .items a sup
 {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 100%;
 
     display: inline-block;
@@ -2538,7 +2597,7 @@ aside .help .email a
 {
     position: relative;
 
-    width: calc(100% - 192px);
+    width: calc(100% - 168px);
 }
 
 .search .icon
@@ -2547,12 +2606,12 @@ aside .help .email a
     z-index: 3;
     top: 0;
     bottom: 0;
-    left: 18px;
+    left: 16px;
 
     display: block;
 
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     margin: auto;
 
     pointer-events: none;
@@ -2563,14 +2622,14 @@ aside .help .email a
 {
     color: var(--text_color);
     font-family: var(--font_family);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
 
     display: block;
 
     width: 100%;
-    height: 60px;
-    padding: 0 80px 0 68px;
+    height: 56px;
+    padding: 0 72px 0 60px;
 
     border: none;
     border-radius: 12px;
@@ -2583,13 +2642,13 @@ aside .help .email a
     position: absolute;
     z-index: 3;
     top: 0;
-    right: 22px;
+    right: 20px;
     bottom: 0;
 
     display: flex;
 
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     margin: auto;
 
     cursor: pointer;
@@ -2616,13 +2675,13 @@ aside .help .email a
 {
     color: #fff;
     font-family: var(--font_family);
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
 
     display: block;
 
-    width: 180px;
-    height: 60px;
+    width: 164px;
+    height: 56px;
 
     cursor: pointer;
 
@@ -2642,6 +2701,17 @@ aside .help .email a
 
     border-radius: 14px;
     background: #ddd;
+}
+
+
+.main_slider .owl-carousel .owl-nav button.owl-prev
+{
+    left: 8px;
+}
+
+.main_slider .owl-carousel .owl-nav button.owl-next
+{
+    right: 8px;
 }
 
 
@@ -2666,10 +2736,10 @@ aside .help .email a
 
     display: flex;
 
-    width: 560px;
+    width: 520px;
     max-width: 100%;
-    height: 382px;
-    padding: 40px 100px;
+    height: 358px;
+    padding: 40px 92px;
 
     justify-content: flex-start;
     align-items: center;
@@ -2681,18 +2751,18 @@ aside .help .email a
 .main_slider .sub_title
 {
     color: #00b600;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 
 .main_slider .title
 {
     color: #3e3e3e;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     line-height: calc(100% + 6px);
 
@@ -2703,14 +2773,14 @@ aside .help .email a
 .main_slider .link
 {
     color: #fff;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 36px;
 
     display: inline-block;
 
-    margin-top: 32px;
-    padding: 2px 40px;
+    margin-top: 28px;
+    padding: 2px 32px;
 
     transition: background .2s linear;
     text-align: center;
@@ -2738,7 +2808,7 @@ aside .help .email a
 {
     display: flex;
 
-    padding: 16px 51px;
+    padding: 15px 39px;
 
     border: 1px solid #d2d2d2;
 
@@ -2752,8 +2822,8 @@ aside .help .email a
 .advantages .sep
 {
     width: 1px;
-    height: 100px;
-    margin: 0 20px;
+    height: 80px;
+    margin: 0 16px;
 
     background: #d2d2d2;
 }
@@ -2762,7 +2832,7 @@ aside .help .email a
 .advantages .item
 {
     color: #3e3e3e;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 
     position: relative;
@@ -2777,7 +2847,9 @@ aside .help .email a
 
 .advantages .item .icon
 {
-    margin-right: 23px;
+    max-width: 52px;
+    max-height: 52px;
+    margin-right: 20px;
 }
 
 .advantages .item img
